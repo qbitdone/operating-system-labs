@@ -1,2 +1,2 @@
 # operating-system-labs
-laboratory exercises from the course operating systems @foivz 2020
+laboratory exercises from the course "Operating systems" @foivz 2020
