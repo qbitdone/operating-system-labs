@@ -52,7 +52,7 @@ int SemOp(int SemNum, int SemOp) {  /* obavi operaciju SemOp sa semaforom SemNum
    return semop(SemId, & SemBuf, 1);
 }
 
-void SemRemove() {  /* uništi skup semafora */
+void SemRemove() {  /* uniÅ¡ti skup semafora */
    semctl(SemId, 0, IPC_RMID, 0);
 }
 
@@ -64,12 +64,12 @@ int proizvodjac (int id)
 		SemOp(SEM_PUN, -1);
 		SemOp(SEM_PISI, -1);
 		podatci->M[podatci->ULAZ] = rand() %1000;
-		cout << "Proizvoðaè broj " << id << " šalje " << podatci->M[podatci->ULAZ] << endl;
+		cout << "ProizvoÃ°aÃ¨ broj " << id << " Å¡alje " << podatci->M[podatci->ULAZ] << endl;
 		podatci->ULAZ = (podatci->ULAZ + 1) % 5;
 		SemOp(SEM_PISI, 1);
 		SemOp(SEM_PRAZAN, 1);
 		i = i + 1;
-		cout << "Proizvoðaè s brojem " << id << " je završio!" << endl;
+		cout << "ProizvoÃ°aÃ¨ s brojem " << id << " je zavrÅ¡io!" << endl;
 		sleep(1);
 	}
 }
@@ -147,10 +147,6 @@ int main (int arg_count, char *argv[])
         wait(NULL);
      
      izlaz();
-     
+ 
      return 0;
-     
-     
 }
-
-
